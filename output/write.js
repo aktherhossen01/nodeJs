@@ -1,3 +1,4 @@
+
 const fs = require("fs")
 
 const content1 = " This is a content \n node js is awesome!!";
@@ -10,3 +11,15 @@ try{
     console.error(err.message);
     
 }
+
+
+const content2 = "this is a async code \n and awesome code"
+fs.writeFile("./output/test-async.txt", content2, (error)=>{
+    if(error){
+        console.error(error.message);
+        
+    }else {
+        console.log("file written asynchroom");
+        
+    }
+})
